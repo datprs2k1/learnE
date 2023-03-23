@@ -6,6 +6,7 @@ import { Image } from 'antd';
 interface card {
   front: string;
   back: string;
+  onChange: () => void;
 }
 
 function FlipCard(props: card) {
@@ -13,7 +14,7 @@ function FlipCard(props: card) {
   const { speak } = useSpeechSynthesis();
 
   return (
-    <div className="flex flex-col justify-center items-center text-center h-64 md:h-[450px] bg-indigo-300 w-full md:w-8/12 mx-auto rounded-md md:rounded-xl">
+    <div className="flex flex-col justify-center items-center text-center h-64 md:h-[450px] bg-indigo-300 mx-auto rounded-md md:rounded-xl">
       <div
         className={`h-full w-full relative transition-all duration-500 [transform-style:preserve-3d] flex justify-center items-center cursor-pointer ${
           open ? '[transform:rotateX(180deg)]' : ''
@@ -22,7 +23,7 @@ function FlipCard(props: card) {
       >
         <div className="absolute [backface-visibility:hidden] h-full w-full flex justify-center items-center">
           <div>
-            <div className="top-4 left-4 absolute text-xl">
+            <div className="top-4 left-4 absolute md:text-xl">
               <span className="text-bold">Thuật ngữ</span>
               <span
                 className="ml-2 cursor-pointer"
@@ -39,7 +40,7 @@ function FlipCard(props: card) {
         </div>
         <div className="absolute [transform:rotateX(180deg)] [backface-visibility:hidden] h-full w-full flex justify-center items-center">
           <div className="grid grid-cols-2 gap-4 mx-5">
-            <span className="top-4 left-4 absolute text-xl text-bold">Định nghĩa</span>
+            <span className="top-4 left-4 absolute md:text-xl text-bold">Định nghĩa</span>
             <h1 className="flex justify-center items-center break-words">/spekˈteɪ.t̬ɚ/ người xem thể thao</h1>
             <div className="flex justify-center items-center">
               <Image
