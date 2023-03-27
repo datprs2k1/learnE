@@ -19,14 +19,14 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*", "./dist/*", ""],
-      "assets/*": ["src/assets/*"],
-      "components/*": ["src/components/*"],
-      "containers/*": ["src/containers/*"],
-      "layouts/*": ["src/layouts/*"],
-      "pages/*": ["src/pages/*"]
-    }
+      "assets/*": ["./src/assets/*"],
+      "components/*": ["./src/components/*"],
+      "containers/*": ["./src/containers/*"],
+      "layouts/*": ["./src/layouts/*"],
+      "pages/*": ["./src/pages/*"]
+    },
+    "noImplicitAny": false
   },
-  "noImplicitAny": false,
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

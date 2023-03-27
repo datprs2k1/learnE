@@ -1,0 +1,1 @@
+export {CarouselFlashCard} from './CarouselFlashCard/CarouselFlashCard';

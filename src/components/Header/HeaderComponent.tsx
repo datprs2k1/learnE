@@ -4,8 +4,9 @@ const { Header } = Layout;
 
 import logo from 'assets/images/logo.png';
 import { useState } from 'react';
+import { FC } from 'react';
 
-function HeaderComponent(props: any) {
+export const HeaderComponent: FC = () => {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
@@ -88,6 +89,4 @@ function HeaderComponent(props: any) {
       </Header>
     </>
   );
-}
-
-export { HeaderComponent };
+};

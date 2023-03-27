@@ -1,9 +1,10 @@
 import { Layout, theme } from 'antd';
 const { Content } = Layout;
 import { Outlet } from 'react-router';
-import { Header, Footer } from 'components';
+import { Header, Footer } from 'components/index';
+import { FC } from 'react';
 
-function HomeLayout(props) {
+export const HomeLayout: FC = () => {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
@@ -17,7 +18,7 @@ function HomeLayout(props) {
             background: colorBgContainer,
           }}
         >
-          <div className="container w-11/12 md:w-9/12 mx-auto mt-16 mb-16">
+          <div className="container w-11/12 md:w-9/12 mx-auto mt-8 mb-16">
             <Outlet />
           </div>
         </Content>
@@ -25,6 +26,4 @@ function HomeLayout(props) {
       </Layout>
     </>
   );
-}
-
-export default HomeLayout;
+};

@@ -1,6 +1,7 @@
 import { Footer } from 'antd/es/layout/layout';
+import { FC } from 'react';
 
-function FooterComponent(props: any) {
+export const FooterComponent: FC = () => {
   return (
     <>
       <Footer
@@ -12,6 +13,4 @@ function FooterComponent(props: any) {
       </Footer>
     </>
   );
-}
-
-export { FooterComponent };
+};
