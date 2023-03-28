@@ -10,6 +10,8 @@ interface IFlipCardProps {
 }
 
 export const FlipCard: FC<IFlipCardProps> = (props) => {
+  const { front, back } = props;
+
   const [open, setOpen] = useState(false);
   const { speak } = useSpeechSynthesis();
 
@@ -52,7 +54,8 @@ export const FlipCard: FC<IFlipCardProps> = (props) => {
             <div className="flex justify-center items-center">
               <Image
                 src="https://farm1.staticflickr.com/6/10835124_3e93a151e0.jpg"
-                className="object-fill w-full md:w-full h-full md:h-4/6 rounded-3xl"
+                className="object-fill rounded-3xl"
+                rootClassName="w-full md:w-3/4"
               />
             </div>
           </div>

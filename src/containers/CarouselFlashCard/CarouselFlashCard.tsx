@@ -23,7 +23,7 @@ export const CarouselFlashCard: FC = () => {
       <div className="absolute w-full top-4 text-xl md:text-2xl">
         <span className="flex justify-center items-center">{currentSlide + 1}/4</span>
       </div>
-      <Carousel ref={carousel} dots={false} beforeChange={onChange}>
+      <Carousel ref={carousel} dots={false} afterChange={onChange} effect="scrollx">
         <div>
           <FlipCard front="A" back="B" />
         </div>

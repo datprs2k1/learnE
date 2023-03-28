@@ -13,9 +13,9 @@ export const FlashItem: FC = () => {
 
   return (
     <>
-      <div className="relative w-full h-64 md:h-32 bg-slate-200 rounded-md md:rounded-xl">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 h-full text-base">
-          <span className="flex justify-center items-center">Spectator (n)</span>
+      <div className="relative w-full h-56 md:h-32 bg-slate-200 rounded-md md:rounded-xl">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-2 md:gap-4 h-full text-base">
+          <span className="flex justify-center items-center col-span-2">Spectator (n)</span>
           <span className="flex justify-center items-center col-span-2">/spekˈteɪ.t̬ɚ/ người xem thể thao</span>
 
           <div className="flex justify-center items-center">
@@ -27,7 +27,7 @@ export const FlashItem: FC = () => {
             />
           </div>
           <span
-            className="absolute md:block right-0 flex justify-center items-center cursor-pointer"
+            className="absolute md:relative top-4 right-4 md:top-0 md:right-0 flex justify-center items-center cursor-pointer"
             onClick={(e) => {
               e.stopPropagation();
               speak({ text: getTextToSpeech('Spectator (v,n)') });
