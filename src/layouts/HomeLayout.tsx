@@ -18,7 +18,7 @@ export const HomeLayout: FC = () => {
             background: colorBgContainer,
           }}
         >
-          <div className="container w-11/12 md:w-10/12 mx-auto mt-8 mb-16">
+          <div className="container w-11/12 md:w-8/12 mx-auto mt-8 mb-16">
             <Outlet />
           </div>
         </Content>

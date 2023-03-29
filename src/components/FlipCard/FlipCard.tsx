@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSpeechSynthesis } from 'react-speech-kit';
 import { SoundOutlined } from '@ant-design/icons';
 import { Image } from 'antd';

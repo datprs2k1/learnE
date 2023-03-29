@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { CarouselFlashCard, FlashCardForm } from 'containers/index';
+import { CarouselFlashCard, FlashCardForm, FlashList } from 'containers/index';
 import { FlashItem } from 'components/index';
 
 export const Test: FC = () => {
@@ -16,7 +16,7 @@ export const Test: FC = () => {
       </div> */}
       <div className="w-full md:w-10/12 mx-auto">
         <div className="flex justify-center items-center">
-          <FlashCardForm />
+          <FlashList />
         </div>
       </div>
     </>

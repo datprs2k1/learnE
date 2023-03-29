@@ -11,9 +11,19 @@ const FlashCard = loadable(() => import('pages/index'), {
   resolveComponent: (components) => components.FlashCard,
 });
 
-const FlashCardList = loadable(() => import('pages/index'), {
-  cacheKey: () => 'FlashCardList',
-  resolveComponent: (components) => components.FlashCardList,
+const FlashCardForm = loadable(() => import('pages/index'), {
+  cacheKey: () => 'FlashCardForm',
+  resolveComponent: (components) => components.FlashCardForm,
+});
+
+const FlashCardView = loadable(() => import('pages/index'), {
+  cacheKey: () => 'FlashCardView',
+  resolveComponent: (components) => components.FlashCardView,
+});
+
+const FlashCardReview = loadable(() => import('pages/index'), {
+  cacheKey: () => 'FlashCardReview',
+  resolveComponent: (components) => components.FlashCardReview,
 });
 
 const Test = loadable(() => import('pages/Test/Test'), {
@@ -33,7 +43,20 @@ const router = createBrowserRouter([
         path: 'flashcard',
         element: <FlashCard />,
       },
+      {
+        path: 'flashcard/:id',
+        element: <FlashCardView />,
+      },
+
+      {
+        path: 'flashcard/create',
+        element: <FlashCardForm />,
+      },
     ],
+  },
+  {
+    path: 'flashcard/:id/review',
+    element: <FlashCardReview />,
   },
 ]);
 

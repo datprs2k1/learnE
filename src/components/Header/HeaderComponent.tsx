@@ -1,10 +1,9 @@
-import { Layout, Menu, Button, Drawer, theme } from 'antd';
-import { MenuOutlined } from '@ant-design/icons';
-const { Header } = Layout;
-
 import logo from 'assets/images/logo.png';
-import { useState } from 'react';
+import { Button, Drawer, Layout, Menu, theme } from 'antd';
 import { FC } from 'react';
+import { MenuOutlined } from '@ant-design/icons';
+import { useState } from 'react';
+const { Header } = Layout;
 
 export const HeaderComponent: FC = () => {
   const {

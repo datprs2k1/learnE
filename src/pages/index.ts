@@ -1,2 +1,5 @@
-export {Test} from './Test/Test';
-export { FlashCardList as FlashCard } from './FlashCard/FlashCardList';
+export { FlashCard } from './FlashCard/FlashCard'
+export { FlashCardForm } from './FlashCard/FlashCardForm'
+export { FlashCardReview } from './FlashCard/FlashCardReview'
+export { FlashCardView } from './FlashCard/FlashCardView'
+export { Test } from './Test/Test'
