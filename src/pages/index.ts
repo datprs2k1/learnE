@@ -1,1 +1,2 @@
-export { Test } from './Test/Test.jsx';
+export {Test} from './Test/Test';
+export { FlashCardList as FlashCard } from './FlashCard/FlashCardList';

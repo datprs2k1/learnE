@@ -21,7 +21,7 @@ export const FlashCardForm: FC<IFlashCardFormProps> = (props) => {
         className="w-full lg:w-7/12 mx-auto"
       >
         <Form.Item name="name" label="Name">
-          <Input />
+          <Input size="large" />
         </Form.Item>
         <Form.List name="flashcards">
           {(fields, { add, remove }) => (
@@ -30,9 +30,9 @@ export const FlashCardForm: FC<IFlashCardFormProps> = (props) => {
                 <Space
                   key={key}
                   align="baseline"
-                  className="bg-slate-200 rounded-md md:rounded-xl px-4 flex justify-between items-center mb-4 w-full h-full"
+                  className="bg-slate-200 rounded-md md:rounded-xl px-4 flex justify-between items-center mb-4 w-full h-72 md:h-32"
                 >
-                  <Row gutter={16} justify="center" align="middle" className="mt-5 w-full">
+                  <Row gutter={16} justify="center" align="middle" className="mt-10 md:mt-5 w-full">
                     <Col xs={{ span: 24 }} md={{ span: 10 }}>
                       <Form.Item {...restField} name={[name, 'term']}>
                         <Input size="large" placeholder="Thuật ngữ" />
@@ -45,6 +45,7 @@ export const FlashCardForm: FC<IFlashCardFormProps> = (props) => {
                     </Col>
                     <Col xs={{ span: 24 }} md={{ span: 4 }}>
                       <Form.Item
+                        className="mt4 md:mt-8"
                         shouldUpdate={(prevValues, curValues) => {
                           console.log(prevValues.flashcards, curValues.flashcards);
                           return prevValues.flashcards !== curValues.flashcards;
@@ -53,7 +54,7 @@ export const FlashCardForm: FC<IFlashCardFormProps> = (props) => {
                         {() => {
                           return (
                             <Form.Item {...restField} name={[name, 'image']}>
-                              <Upload listType="picture-card" maxCount={1} beforeUpload={() => false}>
+                              <Upload listType="picture-card" maxCount={1} beforeUpload={() => false} multiple={false}>
                                 {form.getFieldValue(['flashcards', name, 'image'])?.fileList.length > 0
                                   ? null
                                   : 'Upload'}

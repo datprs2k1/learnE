@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { CarouselFlashCard, FlashCardForm } from 'containers/index';
 import { FlashItem } from 'components/index';
 
-const Test: FC = () => {
+export const Test: FC = () => {
   return (
     <>
       {/* <div className="w-full md:w-10/12 lg:8/12 mx-auto ">
