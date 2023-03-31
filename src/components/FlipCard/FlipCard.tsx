@@ -42,13 +42,13 @@ export const FlipCard: FC<IFlipCardProps> = (props) => {
                 <SoundOutlined />
               </span>
             </div>
-            <span className="text-xl md:text-2xl lg:text-4xl">Spectator (n)</span>
+            <span className="text-2xl md:text-3xl">Spectator (n) {front}</span>
           </div>
         </div>
         <div className="absolute [transform:rotateX(180deg)] [backface-visibility:hidden] h-full w-full flex justify-center items-center">
           <div className="grid grid-cols-2 gap-8 mx-10">
             <span className="top-4 left-4 absolute md:text-xl text-bold">Định nghĩa</span>
-            <span className="flex justify-center items-center break-words text-xl md:text-2xl lg:text-4xl">
+            <span className="flex justify-center items-center break-words text-2xl md:text-3xl">
               /spekˈteɪ.t̬ɚ/ người xem thể thao
             </span>
             <div className="flex justify-center items-center">

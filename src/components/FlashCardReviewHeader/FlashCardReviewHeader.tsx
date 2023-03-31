@@ -1,46 +1,31 @@
 import logo from 'assets/images/logo.png';
-import { Button, Drawer, Layout, Menu, theme } from 'antd';
-import { FC, useState } from 'react';
-import { MenuOutlined } from '@ant-design/icons';
-const { Header } = Layout;
+import { Button, Layout } from 'antd';
+import { FC, useMemo } from 'react';
+interface IFlashCardReviewHeaderProps {
+  learn: {
+    current: number;
+    total: number;
+  };
+}
 
-interface IFlashCardReviewHeaderProps {}
-
-export const FlashCardReviewHeader: FC<IFlashCardReviewHeaderProps> = (props) => {
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
-
-  const [open, setOpen] = useState(false);
-
-  const menuItem = [
-    {
-      key: '0',
-      label: 'Trang chủ',
-    },
-    {
-      key: '1',
-      label: 'Khoá học online',
-    },
-    {
-      key: '2',
-      label: 'Đề thi online',
-    },
-    {
-      key: '3',
-      label: 'Flashcard',
-    },
-  ];
-
+export const FlashCardReviewHeader: FC<IFlashCardReviewHeaderProps> = ({ learn }) => {
   return (
     <>
-      <div className="shadow-md flex justify-between items-center bg-white py-3.5 sticky top-0 z-0 px-4">
-        <img src={logo} alt="logo" className="w-32 h-8 object-fill" />
+      <div className="shadow-md grid grid-cols-3 bg-white py-3.5 sticky top-0 z-0 px-4">
+        <div className="flex justify-start items-center">
+          <img src={logo} alt="logo" className="w-32 h-8 object-fill" />
+        </div>
         <div className="grid grid-rows-1 md:grid-rows-2 gap-2 text-xl text-center align-middle h-full">
-          <span clasName="">9/10</span>
+          <span className="">
+            {learn.current}/{learn.total}
+          </span>
           <span className="hidden md:block">BÀI 8.2 TỪ VỰNG ĐỘNG TỪ</span>
         </div>
-        <Button type="primary">X</Button>
+        <div className="flex justify-end items-center">
+          <Button type="primary" className="w-16" size="large">
+            X
+          </Button>
+        </div>
       </div>
     </>
   );
